@@ -96,7 +96,7 @@ function Phone({ user, messages, setMessages, background, receiver, receiverPhot
                             </div>
                         </div>
 
-                        <div className={`${changeImages ? "flex" : "hidden"} bg-gray-800 p-2 w-3/4 rounded-md h-fit flex-col gap-2  absolute inset-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
+                        <div className={`${changeImages ? "flex" : "hidden"} z-50 bg-gray-800 p-2 w-3/4 rounded-md h-fit flex-col gap-2  absolute inset-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
                             <input onChange={((e) => setReceiverPhotoLink(e.target.value))} type="text" placeholder="Photo Link" className="input input-bordered w-full max-w-xs placeholder:text-xs" />
                             <input onChange={(e) => setBackgroundLink(e.target.value)} type="text" placeholder="Background Link" className="input input-bordered w-full max-w-xs placeholder:text-xs" />
                             <div className='flex gap-2 items-center text-xs text-gray-500'>
