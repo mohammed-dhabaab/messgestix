@@ -2,10 +2,10 @@ import React, { useRef, useState, } from 'react'
 import Phone from './Phone'
 import styles from '../styles'
 function Home() {
-    const amyPhoto = "https://plus.unsplash.com/premium_photo-1661277731403-f5f8f237ae2e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    const amyPhoneBackground = "https://images.unsplash.com/photo-1565252556332-4b297517b501?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    const johnPhoto = "https://cdn.pixabay.com/photo/2016/05/31/11/26/baby-1426651_1280.jpg"
-    const johnPhoneBackground = "https://images.unsplash.com/photo-1464639351491-a172c2aa2911?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    const amyPhoto = ""
+    const amyPhoneBackground = ""
+    const johnPhoto = ""
+    const johnPhoneBackground = ""
     const [messages, setMessages] = useState([])
     const [userName1, setUserName1] = useState("")
     const [userName2, setUserName2] = useState("")

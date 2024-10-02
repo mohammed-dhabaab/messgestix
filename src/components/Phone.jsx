@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import Message from './Message';
 import { BsFillSendFill } from "react-icons/bs";
 import { PiSelectionBackgroundBold } from "react-icons/pi";
+import { FaUserCircle } from "react-icons/fa";
+import { IoSettings } from "react-icons/io5";
 
 function Phone({ user, messages, setMessages, background, receiver, receiverPhoto }) {
     const [messageContent, setMessageContent] = useState("");
@@ -83,7 +85,12 @@ function Phone({ user, messages, setMessages, background, receiver, receiverPhot
                         <div className='bg-slate-800 w-full p-3 pt-6 flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
                                 <div>
-                                    <img className='w-[50px] h-[50px] rounded-full' src={receiverPhotoSrc} alt="Photo" />
+                                    {receiverPhotoSrc ?
+                                        <img className='w-[50px] h-[50px] rounded-full' src={receiverPhotoSrc} alt="Photo" />
+                                        : <FaUserCircle className='w-[50px] h-[50px] text-slate-500 fill-current' />
+
+                                    }
+
                                 </div>
                                 <div className='flex flex-col'>
                                     <p className='text-lg text-gray-300'>{receiver}</p>
@@ -91,12 +98,14 @@ function Phone({ user, messages, setMessages, background, receiver, receiverPhot
                                 </div>
                             </div>
 
-                            <div onClick={() => setChangeIMages(true)} title='Change Images' className='p-2 bg-slate-600 rounded-full text-gray-100 cursor-pointer'>
-                                <PiSelectionBackgroundBold />
+                            <div onClick={() => setChangeIMages(true)} title='Change Images' className='p-2 bg-slate-600 rounded-full text-gray-300 cursor-pointer'>
+                                <IoSettings />
+
                             </div>
                         </div>
 
-                        <div className={`${changeImages ? "flex" : "hidden"} z-50 bg-gray-800 p-2 w-3/4 rounded-md h-fit flex-col gap-2  absolute inset-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
+                        <div className={`${changeImages ? "flex" : "hidden"} z-50 bg-gray-800 p-3 w-3/4 rounded-md h-fit flex-col gap-2  absolute inset-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}>
+                            <p className='text-center'>Change Images</p>
                             <input onChange={((e) => setReceiverPhotoLink(e.target.value))} type="text" placeholder="Photo Link" className="input input-bordered w-full max-w-xs placeholder:text-xs" />
                             <input onChange={(e) => setBackgroundLink(e.target.value)} type="text" placeholder="Background Link" className="input input-bordered w-full max-w-xs placeholder:text-xs" />
                             <div className='flex gap-2 items-center text-xs text-gray-500'>
